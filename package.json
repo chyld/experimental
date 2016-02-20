@@ -2,8 +2,8 @@
   "name": "titantic",
   "version": "1.0.0",
   "scripts": {
-    "dev": "nodemon ./server-dist",
-    "build": "babel server -d server-dist"
+    "dev": "nodemon .srv -w server --verbose --delay 3",
+    "build": "babel server -d .srv"
   },
   "repository": {
     "type": "git",
@@ -20,7 +20,6 @@
     "body-parser": "^1.15.0",
     "express": "^4.13.4",
     "morgan": "^1.6.1",
-    "when": "^3.7.7",
     "ws": "^1.0.1"
   },
   "devDependencies": {
