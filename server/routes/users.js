@@ -1,13 +1,13 @@
 import express from 'express';
+import User from '../models/user';
 const router = express.Router();
-var pg = require('pg');
 
 router.post('/', (req, res) => {
-  const conString = "postgres://ubuntu:joy@localhost/astro";
-  pg.connect(conString, function(err, client, done) {
-    client.query('INSERT INTO users (email, password) VALUES ($1, $2)', [req.body.email, req.body.password], function(err, result) {
-      res.send('Birds home page');
-      done();
+  User.isUser(req.body.email, (err, count) => {
+    if(count) return res.status(400).end();
+
+    User.register(req.body, (err, token) => {
+      res.send({token: token});
     });
   });
 });

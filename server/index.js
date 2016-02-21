@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.listen(8080, () => {
-  console.log('Express.js: Listening');
+  console.log('Express.js: ***Listening***');
 });
 
 app.use('/users', require('./routes/users'));

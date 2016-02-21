@@ -17,8 +17,10 @@
   "homepage": "https://github.com/chyld/titantic#readme",
   "dependencies": {
     "amqplib": "^0.4.1",
+    "bcrypt": "^0.8.5",
     "body-parser": "^1.15.0",
     "express": "^4.13.4",
+    "jsonwebtoken": "^5.7.0",
     "morgan": "^1.6.1",
     "pg": "^4.4.6",
     "ws": "^1.0.1"
